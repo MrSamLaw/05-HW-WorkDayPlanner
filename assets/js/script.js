@@ -61,13 +61,15 @@ timeBlock.each(function () {
     // console.log(moment(timeString).isBefore(moment("10"), "hour"));
     // console.log(moment("8").isAfter(moment("10"), "hour"));
 })
+
 $(".saveBtn").on("click", function () {
     console.log("Button clicked");
     var taskText = $(this).siblings(".time-block").val();
     console.log(taskText);
     var hourTask = $(this).parent(".flex-row").attr("id");
     console.log(hourTask);
+    localStorage.setItem(hourTask, taskText);
     if (taskText) {
-        localStorage.setItem(hourTask, taskText);
+
     }
 })
