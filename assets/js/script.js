@@ -45,7 +45,7 @@ timeBlock.each(function () {
         $(this).addClass("present").removeClass("past future");
         // console.log("current");
     }
-
+    $(this).val(localStorage.getItem(parent.attr("id")));
     // console.log(moment(timeString).isBefore(moment(thisHString), "hour"));
     // if (moment(timeId).isBefore(thisHour, "hour")) {
     //     $(this).addClass("past").removeClass("present future");
@@ -63,4 +63,11 @@ timeBlock.each(function () {
 })
 $(".saveBtn").on("click", function () {
     console.log("Button clicked");
+    var taskText = $(this).siblings(".time-block").val();
+    console.log(taskText);
+    var hourTask = $(this).parent(".flex-row").attr("id");
+    console.log(hourTask);
+    if (taskText) {
+        localStorage.setItem(hourTask, taskText);
+    }
 })
