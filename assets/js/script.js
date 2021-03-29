@@ -1,16 +1,14 @@
 var today = moment();
-var currentDay = today.format("dddd Do MMMM YYYY");
+var currentDay = today.format("dddd [the ]Do MMMM YYYY");
 var currentHour = parseInt(moment().format("H"))
+var currentTime = today.format("h:mm:ss A");
 // var currentHour = moment("29/03/2021", "11:05:00")
-
-$("#currentHour").text(currentHour);
+$("#currentDay").text("Today is " + currentDay);
+$("#currentTime").text("The time is " + currentTime);
 
 const timeBlock = $(".time-block");
 
 
-$(document).ready(function () {
-    $("#currentDay").text(currentDay);
-});
 // function (time) {
 //     // Function to colorise the time blocks
 //     if (moment(time).isBefore(currentHour, "hour")) {
@@ -27,27 +25,28 @@ timeBlock.each(function () {
     var timeId = parseInt(parent.attr("id"));
     var timeString = parent.attr("id");
     var thisHour = parseInt(moment().format("H"));
+    var thisHString = (moment().format("H"));
 
     // console.log(parent);
     // console.log(timeId);
-    console.log("timeId is: " + moment(timeId));
-    console.log("thisHour is: " + thisHour);
+    // console.log("timeId is: " + moment(timeId));
+    // console.log("thisHour is: " + thisHour);
 
     // console.log(moment(timeId));
     // console.log(moment(thisHour));
 
     if (timeId < thisHour) {
         $(this).addClass("past").removeClass("present future");
-        console.log("before");
+        // console.log("before");
     } else if (timeId > thisHour) {
         $(this).addClass("future").removeClass("present past");
-        console.log("after");
+        // console.log("after");
     } else if (timeId == thisHour) {
         $(this).addClass("present").removeClass("past future");
-        console.log("current");
+        // console.log("current");
     }
 
-    console.log(moment(timeId).isBefore(moment(thisHour), "hour"));
+    // console.log(moment(timeString).isBefore(moment(thisHString), "hour"));
     // if (moment(timeId).isBefore(thisHour, "hour")) {
     //     $(this).addClass("past").removeClass("present future");
     //     console.log("before");
@@ -59,7 +58,7 @@ timeBlock.each(function () {
     //     console.log("current");
     // }
 
-    console.log(moment(timeString).isBefore(moment("10"), "hour"));
-    console.log(moment("8").isAfter(moment("10"), "hour"));
+    // console.log(moment(timeString).isBefore(moment("10"), "hour"));
+    // console.log(moment("8").isAfter(moment("10"), "hour"));
 })
 
