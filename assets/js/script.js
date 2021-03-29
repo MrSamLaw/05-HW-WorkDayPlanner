@@ -61,4 +61,6 @@ timeBlock.each(function () {
     // console.log(moment(timeString).isBefore(moment("10"), "hour"));
     // console.log(moment("8").isAfter(moment("10"), "hour"));
 })
-
+$(".saveBtn").on("click", function () {
+    console.log("Button clicked");
+})
