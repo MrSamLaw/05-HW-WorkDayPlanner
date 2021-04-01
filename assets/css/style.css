@@ -1,27 +1,48 @@
+:root {
+  --faux-deep-jungle-green:#02534D;
+  --faux-midnight:#741C71;
+  --faux-sherwin-williams-paint:#D1C8BF;
+  --faux-raw-umber:#7E6242;
+  --faux-smoky-black:#0D0D0D;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+  background-color: var(--faux-smoky-black);
+  color: var(--faux-sherwin-williams-paint);
 }
-
 textarea {
   background: transparent;
   border: none;
   resize: none;
-  color: #000000;
-  border-left: 1px solid black;
+  border-left: 1px solid var(--faux-sherwin-williams-paint);
+  border-top: 1px solid var(--faux-sherwin-williams-paint);
   padding: 10px;
+  vertical-align: middle;
 }
 
 .jumbotron {
   text-align: center;
-  background-color: transparent;
-  color: black;
+  background-color: var(--faux-midnight);
+  color: var(--faux-smoky-black);
   border-radius: 0;
   border-bottom: 10px solid black;
   height:100vh;
 }
+.jumbotron h1 {
+  font-family: 'Dela Gothic One', cursive;
+  text-shadow: 2px 2px 4px var(--faux-raw-umber);
+}
 
+.lead {
+  color:var(--faux-sherwin-williams-paint);
+}
 .description {
   white-space: pre-wrap;
 }
@@ -31,41 +52,49 @@ textarea {
   /* border-radius: 15px; */
 }
 
-.row {
+.flex-row {
   white-space: pre-wrap;
   height: 80px;
-  border-top: 1px solid white;
+  /* border-top: 1px solid var(--faux-sherwin-williams-paint); */
 }
 
 .hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
+  background-color: var(--faux-sherwin-williams-paint);
+  color:var(--faux-smoky-black);
+  border-top: 1px dashed var(--faux-raw-umber);
   text-align: center;
   vertical-align: middle;
+  height:80px;
 }
 
 .past {
-  background-color: #d3d3d3;
-  color: white;
+  background-color:var(--faux-deep-jungle-green);
+  color: var(--faux-sherwin-williams-paint);
 }
 
 .present {
-  background-color: #ff6961;
-  color: white;
+  background-color: var(--faux-sherwin-williams-paint);
+  color: var(--faux-raw-umber);
 }
 
 .future {
-  background-color: #77dd77;
-  color: white;
+  background-color:var(--faux-midnight);
+  color: var(--faux-sherwin-williams-paint);
+}
+
+.social {
+  background-color: var(--faux-raw-umber);
+  color: var(--faux-smoky-black);
 }
 
 .saveBtn {
-  border-left: 1px solid black;
+  border: 1px solid var(--faux-sherwin-williams-paint);
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06aed5;
-  color: white;
+  background-color:var(--faux-midnight);
+  background-image: url(../images/floppy-disk.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .saveBtn i:hover {

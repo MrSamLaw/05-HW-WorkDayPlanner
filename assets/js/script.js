@@ -1,7 +1,7 @@
 var today = moment();
 var currentDay = today.format("dddd [the ]Do MMMM YYYY");
 var currentHour = parseInt(moment().format("H"))
-var currentTime = today.format("h:mm:ss A");
+var currentTime = today.format("h:mm A");
 const timeBlock = $(".time-block");
 var socialHours = [6, 7, 18, 19, 20, 21, 22];
 
@@ -28,7 +28,7 @@ timeBlock.each(function () {
     for (i = 0; i < socialHours.length; i++) {
         console.log(socialHours[i]);
         if (timeId === socialHours[i]) {
-            $(this).addClass("social").removeClass("past present future");
+            $(this).addClass("social").removeClass("past future");
         }
     }
 
