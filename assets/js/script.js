@@ -3,6 +3,7 @@ var currentDay = today.format("dddd [the ]Do MMMM YYYY");
 var currentHour = parseInt(moment().format("H"))
 var currentTime = today.format("h:mm:ss A");
 const timeBlock = $(".time-block");
+var socialHours = [6, 7, 18, 19, 20, 21, 22];
 
 // Dynamic HTML JQuery elements
 $("#currentDay").text("Today is " + currentDay);
@@ -23,9 +24,17 @@ timeBlock.each(function () {
         $(this).addClass("present").removeClass("past future");
     }
 
+    // Change classes for social time
+    for (i = 0; i < socialHours.length; i++) {
+        console.log(socialHours[i]);
+        if (timeId === socialHours[i]) {
+            $(this).addClass("social").removeClass("past present future");
+        }
+    }
+
     // Fill textAreas from localStorage
     $(this).val(localStorage.getItem(parent.attr("id")));
-})
+});
 
 //Event listener for button click
 $(".saveBtn").on("click", function () {
