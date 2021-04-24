@@ -1,5 +1,11 @@
-# 05-HW-WorkDayPlanner
+# Harder Better Faster Stronger - Work Day Planner
 ![Starting Screen](assets/images/DayPlanner01.png)
+
+## Deployment
+[https://mrsamlaw.github.io/WorkDayPlanner/](https://mrsamlaw.github.io/WorkDayPlanner/)
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 
 ## Description
 Our client is looking for a way to efficiently manage their employees work time by providing them with an app to plan out their work day hour by hour.
@@ -10,9 +16,6 @@ Our client is looking for a way to efficiently manage their employees work time 
 - Timeblocks are color coded for past, present or future
 - Timeblock allows for event entry
 - Event saves in Timeblock & localStorage on button click
-
-## Deployment
-https://mrsamlaw.github.io/05-HW-WorkDayPlanner/
 
 ## Screenshots
 ![Tasks Screen](assets/images/DayPlanner02.png)
